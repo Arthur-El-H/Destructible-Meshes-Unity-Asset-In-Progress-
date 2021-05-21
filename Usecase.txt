@@ -1,0 +1,26 @@
+Object/Hammer (:IDestructor) hits Object/Wall(:IDestructible).
+
+Force X is added at Collision. 
+Force effects the IDestructible by
+
+a) breaking a part of the wall out of the wall.								//This describes the surface 2D calculations
+b) creating a hole in the wall / a crack in wall(a crack is a series of connected Holes)
+c) expanding existing cracks in the wall.
+
+each of those actions reduces X, which cannot fall under 0.
+
+
+'a)' is a special case of 'c)', because it means that the cracks in the wall form a polygon which is fully disconnected from the wall.
+This polygon is then "cutted out" of the wall by the Cutter and becomes a fragment.
+
+Grid2D and Grid3D help calculating the placing and expansion of cracks and holes.
+
+
+
+Every hole in the wall is the startpoint of a crack, that goes into the wall, a so-called crackInDepth.
+Those cracksInDepth can also be effected by a Force and can:
+
+a) Expand
+When expanding, they can:
+	a.1) cross another crackInDepth
+	a.2) expand to the other side of the wall
