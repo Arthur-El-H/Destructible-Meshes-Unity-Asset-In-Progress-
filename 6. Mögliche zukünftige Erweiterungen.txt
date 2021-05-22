@@ -3,3 +3,5 @@ Materialien mit Maserung bzw. Sollbruchstellen (Bspw. Holz)
 Wo befindet sich das IDestructible?
 --> Zusammenwirken von Destroyable-Meshes und Unity physics: Wird das Idestructible in irgendeiner Weise durch ein zweites Objekt gestützt und dadurch 
 die Position der entstehenden Risse beeinflusst?
+
+Zusammenkleben von IDestrucibles.
