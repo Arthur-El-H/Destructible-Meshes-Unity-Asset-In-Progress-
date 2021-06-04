@@ -1,0 +1,5 @@
+What could be added in future:
+
+- grains/planned breaking points in a mesh
+- combination with physics: Is the IDestructible at some points supported by other objects?
+- glueing together Idestructibles
