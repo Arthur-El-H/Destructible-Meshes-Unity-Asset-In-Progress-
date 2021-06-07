@@ -1,0 +1,22 @@
+As this Project will be developed test-driven, in here ideas for 
+tests / testable features are collected before Refining/Differentiation/ final implemenation:
+
+- calculate Force
+	Scan all surrounding cracks in specific distance from source of Force
+	distance is dependent of strength of force. Only direct neighbours are returned:
+	If there is no straight line from source of Force to a crack, which doesnt cross 
+	any other crack, it is not returned.
+		Hit --> List <Crack>
+
+- Get Alignments from crack
+	Given a Crack, the tested functions calculates the number of 
+	different aligned parts and there respective alignments.
+		Crack --> List <Crack, Vector3 alignment>
+
+- Get possible expansion are
+	Crack crack, Vector3 crackAlignment, float force, Vector3 sourceOfForce 
+	--> area of possible expansion (4x Vector3 in 2D or 6x Vector3 in 3D)
+
+- Expand Crack
+	area of possible expansions (AopE) --> other crack to connect to (check in area larger AopE!) 
+					       or an random point inside AopE.
